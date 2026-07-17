@@ -1,0 +1,8 @@
+{
+  "name": "Kraft HR Solutions",
+  "description": "Sitio web premium estilo Framer para Kraft HR Solutions, con diseño altamente responsivo, animaciones fluidas y planificador de presupuesto interactivo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Ysabeau+Infant:wght@300;400;500;600;700;800;900;1000&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Ysabeau Infant", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-50: #fbfbfe;
+  --color-brand-100: #f2f2fa;
+  --color-brand-200: #E3E5F4;
+  --color-brand-300: #c7c7e2;
+  --color-brand-400: #A9A9CC;
+  --color-brand-500: #6D4DE6;
+  --color-brand-600: #553bb8;
+  --color-brand-700: #422d91;
+  --color-brand-800: #30206b;
+  --color-brand-900: #1f1447;
+
+  --color-neutral-dark: #121215;
+  --color-neutral-card: #18181c;
+  --color-neutral-border: #282830;
+}
+
+/* Custom scrollbar and ambient grid effects typical of Framer templates */
+body {
+  background-color: #fafafa;
+  color: #121215;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-brand-200);
+  color: var(--color-brand-900);
+}
+
+/* Custom fade scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;
+}
+
+/* Framer-style background grid vertical lines */
+.bg-grid-lines {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: calc((100% - 4px) / 5) 100%;
+}
+
+/* Framer-style large grid layout with light branding color */
+.bg-big-grid {
+  background-image: linear-gradient(rgba(109, 77, 230, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(109, 77, 230, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Highly optimized Framer-style vertical marquee */
+@keyframes marquee-y {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-marquee-y {
+  animation: marquee-y 22s linear infinite;
+}
+
+.animate-marquee-y:hover {
+  animation-play-state: paused;
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-700) 100%);
+  }
+}
